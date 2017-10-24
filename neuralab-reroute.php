@@ -35,10 +35,11 @@ class NrlbMailRerouter {
 
   private $plugin_name;
 
-  private $settings_link = plugin_basename(dirname(__FILE__)) . '/neuralab-reroute-settings.php';
+  private $settings_link;
 
   // Constructor
   public function __construct() {
+    $this->settings_link = plugin_basename(dirname(__FILE__)) . '/neuralab-reroute-settings.php';
     $this->add_actions();
     $this->add_filters();
   }
